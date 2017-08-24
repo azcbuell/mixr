@@ -23,12 +23,12 @@ END_SLOTTABLE(MonitorMetrics)
 
 // Map slot table to handles
 BEGIN_SLOT_MAP(MonitorMetrics)
-    ON_SLOT(1,setSlotRed,Table1)
-    ON_SLOT(2,setSlotGreen,Table1)
-    ON_SLOT(3,setSlotBlue,Table1)
-    ON_SLOT(4,setSlotPhosphors,List)
-    ON_SLOT(5,setSlotWhiteRGB,List)
-    ON_SLOT(6,setSlotWhiteCIE,List)
+    ON_SLOT(1, setSlotRed, Table1)
+    ON_SLOT(2, setSlotGreen, Table1)
+    ON_SLOT(3, setSlotBlue, Table1)
+    ON_SLOT(4, setSlotPhosphors, List)
+    ON_SLOT(5, setSlotWhiteRGB, List)
+    ON_SLOT(6, setSlotWhiteCIE, List)
 END_SLOT_MAP()
 
 MonitorMetrics::MonitorMetrics(const Table1* redLumTbl, const Table1* greenLumTbl, const Table1* blueLumTbl,

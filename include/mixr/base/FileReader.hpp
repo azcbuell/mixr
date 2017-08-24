@@ -121,10 +121,6 @@ public:
    const char* getNextRecord();
 
 private:
-   bool setSlotPathname(String* const msg);
-   bool setSlotFilename(String* const msg);
-   bool setSlotRecordLength(Number* const msg);
-
    std::ifstream* dbf {};
 
    int   rnum {1};         // record number
@@ -136,6 +132,13 @@ private:
    static const size_t PATHNAME_LENGTH = 256; // Max length of path name
    char filename[FILENAME_LENGTH] {};         // file name
    char pathname[PATHNAME_LENGTH] {};         // path name
+
+private:
+    // slot table helper methods
+    bool setSlotPathname(String* const);
+    bool setSlotFilename(String* const);
+    bool setSlotRecordLength(Number* const);
+ 
 };
 
 inline bool FileReader::setRecordNumber(const int num)

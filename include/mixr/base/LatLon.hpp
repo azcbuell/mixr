@@ -73,18 +73,12 @@ public:
 
     LatLon();
 
-    operator double() const                 { return Number::getDouble(); }
+    operator double() const         { return Number::getDouble(); }
 
-    Dir getDir() const                      { return dir; }
-    int getDeg() const                      { return deg; }
-    int getMin() const                      { return min; }
-    double getSec() const                   { return sec; }
-
-    //slottable functions start here
-    virtual bool setDirection(const String* const sdobj);
-    virtual bool setDegrees(const Number* const sdeobj);
-    virtual bool setMinutes(const Number* const smobj);
-    virtual bool setSeconds(const Number* const ssobj);
+    Dir getDir() const              { return dir; }
+    int getDeg() const              { return deg; }
+    int getMin() const              { return min; }
+    double getSec() const           { return sec; }
 
 protected:
     void computeVal();
@@ -94,10 +88,18 @@ protected:
     bool setSec(const double seconds);
 
 private:
-    Dir     dir {NONE};         // direction
-    int     deg {};             // degrees
-    int     min {};             // minutes
-    double  sec {};             // seconds
+    Dir     dir {NONE};  // direction
+    int     deg {};      // degrees
+    int     min {};      // minutes
+    double  sec {};      // seconds
+
+private:
+    // slot table helper methods
+    virtual bool setDirection(const String* const);
+    virtual bool setDegrees(const Number* const);
+    virtual bool setMinutes(const Number* const);
+    virtual bool setSeconds(const Number* const);
+
 };
 
 }
