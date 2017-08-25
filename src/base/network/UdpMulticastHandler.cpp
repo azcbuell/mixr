@@ -54,11 +54,10 @@ BEGIN_SLOTTABLE(UdpMulticastHandler)
 
 END_SLOTTABLE(UdpMulticastHandler)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(UdpMulticastHandler)
-    ON_SLOT(1,setSlotMulticastGroup,String)
-    ON_SLOT(2,setSlotTTL,Number)
-    ON_SLOT(3,setSlotLoopback,Number)
+    ON_SLOT(1, setSlotMulticastGroup, String)
+    ON_SLOT(2, setSlotTTL, Number)
+    ON_SLOT(3, setSlotLoopback, Number)
 END_SLOT_MAP()
 
 UdpMulticastHandler::UdpMulticastHandler()

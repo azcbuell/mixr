@@ -44,9 +44,8 @@ BEGIN_SLOTTABLE(TcpClient)
                     //    the Internet standard "." (dotted) notation.
 END_SLOTTABLE(TcpClient)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(TcpClient)
-    ON_SLOT(1,setSlotIpAddress,String)
+    ON_SLOT(1, setSlotIpAddress, String)
 END_SLOT_MAP()
 
 TcpClient::TcpClient()

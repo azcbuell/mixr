@@ -41,28 +41,16 @@ namespace base {
 
 IMPLEMENT_SUBCLASS(TcpServerSingle, "TcpServerSingle")
 EMPTY_SLOTTABLE(TcpServerSingle)
+EMPTY_DELETEDATA(TcpServerSingle)
 
-//------------------------------------------------------------------------------
-// Constructors
-//------------------------------------------------------------------------------
 TcpServerSingle::TcpServerSingle()
 {
    STANDARD_CONSTRUCTOR()
 }
 
-//------------------------------------------------------------------------------
-// copyData() -- copy member data
-//------------------------------------------------------------------------------
 void TcpServerSingle::copyData(const TcpServerSingle& org, const bool)
 {
     BaseClass::copyData(org);
-}
-
-//------------------------------------------------------------------------------
-// deleteData() -- delete member data
-//------------------------------------------------------------------------------
-void TcpServerSingle::deleteData()
-{
 }
 
 //------------------------------------------------------------------------------
@@ -71,7 +59,7 @@ void TcpServerSingle::deleteData()
 bool TcpServerSingle::initNetwork(const bool noWaitFlag)
 {
     noWait = noWaitFlag;
-    bool ok = BaseClass::initNetwork(false);
+    bool ok {BaseClass::initNetwork(false)};
     if (ok) {
         ok = listenForConnections();
         if (ok) {
@@ -93,7 +81,7 @@ bool TcpServerSingle::bindSocket()
    // ---
    // Our base class will bind the socket
    // ---
-   bool ok = BaseClass::bindSocket();
+   bool ok {BaseClass::bindSocket()};
 
    if (ok) {
       struct sockaddr_in addr;        // Working address structure
@@ -187,4 +175,3 @@ bool TcpServerSingle::acceptConnection()
 
 }
 }
-

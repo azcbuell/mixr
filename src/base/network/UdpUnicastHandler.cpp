@@ -44,9 +44,8 @@ BEGIN_SLOTTABLE(UdpUnicastHandler)
                         //    the Internet standard "." (dotted) notation.
 END_SLOTTABLE(UdpUnicastHandler)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(UdpUnicastHandler)
-    ON_SLOT(1,setSlotIpAddress,String)
+    ON_SLOT(1, setSlotIpAddress, String)
 END_SLOT_MAP()
 
 UdpUnicastHandler::UdpUnicastHandler()
