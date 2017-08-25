@@ -225,9 +225,6 @@ BEGIN_SLOT_MAP(Polynomial)
     ON_SLOT( 1, setSlotCoefficients, List)
 END_SLOT_MAP()
 
-//------------------------------------------------------------------------------
-// Class support functions
-//------------------------------------------------------------------------------
 Polynomial::Polynomial()
 {
    STANDARD_CONSTRUCTOR()
@@ -252,9 +249,9 @@ double Polynomial::f(const double x, FStorage* const) const
 {
    double result {};
    if (m > 0) {
-      unsigned int n {m-1};
+      const int n {m-1};
       double xx = 1.0;
-      for (unsigned int i = 0; i <= n; i++) {
+      for (int i = 0; i <= n; i++) {
          result += (a[i] * xx);
          xx *= x;
       }
@@ -265,13 +262,13 @@ double Polynomial::f(const double x, FStorage* const) const
 //------------------------------------------------------------------------------
 // Set functions
 //------------------------------------------------------------------------------
-bool Polynomial::setCoefficients(const double* const aa, const unsigned short mm)
+bool Polynomial::setCoefficients(const double* const aa, const int mm)
 {
    bool ok {};
 
    // Clear the coefficients
    if (aa == nullptr || mm == 0) {
-      for (unsigned int i = 0; i < mm; i++) {
+      for (int i = 0; i < mm; i++) {
          a[i] = 0;
       }
       m = 0;
@@ -280,7 +277,7 @@ bool Polynomial::setCoefficients(const double* const aa, const unsigned short mm
 
    // Copy the coefficients
    else if (mm <= MAX_COEFF) {
-      for (unsigned int i = 0; i < mm; i++) {
+      for (int i = 0; i < mm; i++) {
          a[i] = aa[i];
       }
       m = mm;

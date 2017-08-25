@@ -147,13 +147,13 @@ public:
 protected:
    // slot table helper methods
    virtual bool setSlotCoefficients(const List* const);
-   bool setCoefficients(const double* const coeff, const unsigned short n);
+   bool setCoefficients(const double* const coeff, const int n);
 
 private:
-   static const unsigned short MAX_COEFF = (MAX_DEGREE+1);
+   static const int MAX_COEFF = (MAX_DEGREE+1);
 
-   double  a[MAX_COEFF] {};   // Constant coefficients vector
-   unsigned short m {};       // Number of coefficients (degree + 1)
+   double a[MAX_COEFF] {};   // Constant coefficients vector
+   int m {};                 // Number of coefficients (degree + 1)
 };
 
 }
