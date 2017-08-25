@@ -7,9 +7,22 @@ namespace mixr {
 namespace base {
 
 IMPLEMENT_SUBCLASS(Add, "+")
-IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(Subtract, "-")
-IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(Multiply, "*")
-IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(Divide, "/")
+EMPTY_DELETEDATA(Add)
+
+IMPLEMENT_SUBCLASS(Subtract, "-")
+EMPTY_SLOTTABLE(Subtract)
+EMPTY_COPYDATA(Subtract)
+EMPTY_DELETEDATA(Subtract)
+
+IMPLEMENT_SUBCLASS(Multiply, "*")
+EMPTY_SLOTTABLE(Multiply)
+EMPTY_COPYDATA(Multiply)
+EMPTY_DELETEDATA(Multiply)
+
+IMPLEMENT_SUBCLASS(Divide, "/")
+EMPTY_SLOTTABLE(Divide)
+EMPTY_COPYDATA(Divide)
+EMPTY_DELETEDATA(Divide)
 
 BEGIN_SLOTTABLE(Add)
     "n2",       //  2nd number (first number is from Number)
@@ -54,16 +67,6 @@ void Add::copyData(const Add& org, const bool)
    BaseClass::copyData(org);
    n2 = org.n2;
 }
-EMPTY_DELETEDATA(Add)
-
-EMPTY_COPYDATA(Subtract)
-EMPTY_DELETEDATA(Subtract)
-
-EMPTY_COPYDATA(Multiply)
-EMPTY_DELETEDATA(Multiply)
-
-EMPTY_COPYDATA(Divide)
-EMPTY_DELETEDATA(Divide)
 
 //------------------------------------------------------------------------------
 // operation() -- the operations

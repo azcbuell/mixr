@@ -23,7 +23,6 @@ END_SLOT_MAP()
 AngularVelocity::AngularVelocity()
 {
     STANDARD_CONSTRUCTOR()
-
     val = 1;
 }
 
@@ -42,8 +41,8 @@ AngularVelocity::AngularVelocity(const Angle* const newAngle, const Time* const 
     STANDARD_CONSTRUCTOR()
 
     //Set a default angle, time, and angularVelocity
-    angle = 1;
-    time = 1;
+    angle = 1.0;
+    time = 1.0;
     val = 1;
 
     //Set Checks to false:

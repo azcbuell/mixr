@@ -20,7 +20,6 @@ BEGIN_SLOTTABLE(Timer)
    "active",             // 3: Sets timer active (running) flag (default: false)
 END_SLOTTABLE(Timer)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(Timer)
    ON_SLOT(1, setSlotTimerValue, Time)
    ON_SLOT(2, setSlotAlarmTime, Time)
@@ -191,7 +190,8 @@ bool Timer::setSlotTimerActive(const Number* const msg)
 //==============================================================================
 // Class UpTimer
 //==============================================================================
-IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(UpTimer,"UpTimer")
+IMPLEMENT_SUBCLASS(UpTimer, "UpTimer")
+EMPTY_SLOTTABLE(UpTimer)
 EMPTY_COPYDATA(UpTimer)
 EMPTY_DELETEDATA(UpTimer)
 
@@ -203,7 +203,8 @@ UpTimer::UpTimer(const double rtime) : Timer(UP,rtime)
 //==============================================================================
 // Class UpTimer
 //==============================================================================
-IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(DownTimer,"DownTimer")
+IMPLEMENT_SUBCLASS(DownTimer, "DownTimer")
+EMPTY_SLOTTABLE(DownTimer)
 EMPTY_COPYDATA(DownTimer)
 EMPTY_DELETEDATA(DownTimer)
 

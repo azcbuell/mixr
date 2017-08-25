@@ -54,13 +54,14 @@ public:
     const Mass* getMass() const;
     const Volume* getVolume() const;
 
-    // slot table functions
-    bool setSlotMass(const Mass* newMass);
-    bool setSlotVolume(const Volume* newVolume);
-
 private:
     safe_ptr<const Mass>   myMass;         // holds our mass type
     safe_ptr<const Volume> myVolume;       // holds our volume type
+
+private:
+    // slot table helper methods
+    bool setSlotMass(const Mass*);
+    bool setSlotVolume(const Volume*);
 };
 
 inline std::ostream& operator<<(std::ostream& sout, const Density& n)
