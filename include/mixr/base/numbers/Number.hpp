@@ -55,10 +55,12 @@ public:
 
    virtual void setValue(const double nv)   { val = nv; }
 
-   virtual bool setSlotValue(const Number* const);
-
 protected:
    double val {};   // value of this object
+
+private:
+   // slot table helper methods
+   bool setSlotValue(const Number* const);
 };
 
 }

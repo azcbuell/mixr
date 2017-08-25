@@ -15,7 +15,6 @@ BEGIN_SLOTTABLE(AngularVelocity)
     "time",     // 2: time
 END_SLOTTABLE(AngularVelocity)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(AngularVelocity)
     ON_SLOT(1, setSlotAngle, Angle)
     ON_SLOT(2, setSlotTime, Time)

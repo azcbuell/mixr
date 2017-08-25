@@ -4,7 +4,8 @@
 namespace mixr {
 namespace base {
 
-IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(Integer, "int")
+IMPLEMENT_SUBCLASS(Integer, "int")
+EMPTY_SLOTTABLE(Integer)
 EMPTY_COPYDATA(Integer)
 EMPTY_DELETEDATA(Integer)
 

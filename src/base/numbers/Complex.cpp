@@ -16,9 +16,8 @@ BEGIN_SLOTTABLE(Complex)
    "imag",      // 1: imaginary component
 END_SLOTTABLE(Complex)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(Complex)
-   ON_SLOT(1,setSlotImaginary,Number)
+   ON_SLOT(1, setSlotImaginary, Number)
 END_SLOT_MAP()
 
 Complex::Complex()

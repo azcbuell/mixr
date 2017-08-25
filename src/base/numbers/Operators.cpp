@@ -11,9 +11,6 @@ IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(Subtract, "-")
 IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(Multiply, "*")
 IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(Divide, "/")
 
-//------------------------------------------------------------------------------
-// slot table for this class type
-//------------------------------------------------------------------------------
 BEGIN_SLOTTABLE(Add)
     "n2",       //  2nd number (first number is from Number)
     "n3",       //  3rd number
@@ -26,18 +23,12 @@ BEGIN_SLOTTABLE(Add)
     "n10",      // 10th number
 END_SLOTTABLE(Add)
 
-//------------------------------------------------------------------------------
-//  Map slot table to handles
-//------------------------------------------------------------------------------
 BEGIN_SLOT_MAP(Add)
     // Accept an Number at any slot index ...
     const auto _msg = dynamic_cast<Number*>(obj);
     if (_msg != nullptr) { _ok = setSecondNumber(_msg); }
 END_SLOT_MAP()
 
-//------------------------------------------------------------------------------
-// Constructors
-//------------------------------------------------------------------------------
 Add::Add()
 {
    STANDARD_CONSTRUCTOR()
@@ -58,10 +49,6 @@ Divide::Divide()
    STANDARD_CONSTRUCTOR()
 }
 
-
-//------------------------------------------------------------------------------
-// copyData(), deleteData() -- copy (delete) member data
-//------------------------------------------------------------------------------
 void Add::copyData(const Add& org, const bool)
 {
    BaseClass::copyData(org);
@@ -98,7 +85,7 @@ void Multiply::operation()
 
 void Divide::operation()
 {
-    if (n2 != 0.0) val = (val / n2);  /* only if non-zero divisor */
+    if (n2 != 0.0) val = (val / n2);  // only if non-zero divisor
 }
 
 //------------------------------------------------------------------------------

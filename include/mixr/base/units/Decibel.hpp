@@ -61,10 +61,13 @@ public:
     void operator-=(const double);
 
     virtual void setValue(const double nv) override;
-    virtual bool setSlotValue(const Number* const svobj) override;
 
 private:
     double db {};    // value in dBs
+
+private:
+    // slot table helper methods
+    bool setSlotValue(const Number* const);
 };
 
 //------------------------------------------------------------------------------

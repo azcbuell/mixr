@@ -115,13 +115,12 @@ public:
    void showPhasor(const int dp=2) const;
    friend std::ostream& operator<<(std::ostream& sout, const Complex& z);
 
-   //--------------------------------------------------------------------------
-   // Slot functions
-   //--------------------------------------------------------------------------
-   virtual bool setSlotImaginary(const Number* const msg);
-
 private:
    double imag {};   // imaginary component
+
+private:
+   // slot table helper methods
+   bool setSlotImaginary(const Number* const);
 };
 
 #include "mixr/base/numbers/Complex.inl"
