@@ -22,9 +22,9 @@ BEGIN_SLOTTABLE(FileReader)
 END_SLOTTABLE(FileReader)
 
 BEGIN_SLOT_MAP(FileReader)
-    ON_SLOT(1,setSlotPathname,String)
-    ON_SLOT(2,setSlotFilename,String)
-    ON_SLOT(3,setSlotRecordLength,Number)
+    ON_SLOT(1, setSlotPathname, String)
+    ON_SLOT(2, setSlotFilename, String)
+    ON_SLOT(3, setSlotRecordLength, Number)
 END_SLOT_MAP()
 
 FileReader::FileReader()

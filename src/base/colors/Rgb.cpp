@@ -16,9 +16,9 @@ BEGIN_SLOTTABLE(Rgb)
 END_SLOTTABLE(Rgb)
 
 BEGIN_SLOT_MAP(Rgb)
-    ON_SLOT(1,setSlotRed,Number)
-    ON_SLOT(2,setSlotGreen,Number)
-    ON_SLOT(3,setSlotBlue,Number)
+    ON_SLOT(1, setSlotRed, Number)
+    ON_SLOT(2, setSlotGreen, Number)
+    ON_SLOT(3, setSlotBlue, Number)
 END_SLOT_MAP()
 
 Rgb::Rgb(const double r, const double g, const double b)
@@ -64,14 +64,6 @@ bool Rgb::setSlotBlue(Number* const msg)
     double value = msg->getReal();
     bool ok = setBlue( value );
     if (!ok) std::cerr << "Rgb::setBlue: invalid entry(" << value << "), valid range: 0 to 1" << std::endl;
-    return ok;
-}
-
-bool Rgb::setSlotAlpha(Number* const msg)
-{
-    double value = msg->getReal();
-    bool ok = setAlpha( value );
-    if (!ok) std::cerr << "Rgb::setAlpha: invalid entry(" << value << "), valid range: 0 to 1" << std::endl;
     return ok;
 }
 

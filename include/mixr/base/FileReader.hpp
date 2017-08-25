@@ -92,10 +92,10 @@ class String;
 //------------------------------------------------------------------------------
 class FileReader : public Object
 {
-    DECLARE_SUBCLASS(FileReader, Object)
+   DECLARE_SUBCLASS(FileReader, Object)
 
 public:
-    FileReader();
+   FileReader();
 
    bool open();
    bool isReady();
@@ -134,11 +134,10 @@ private:
    char pathname[PATHNAME_LENGTH] {};         // path name
 
 private:
-    // slot table helper methods
-    bool setSlotPathname(String* const);
-    bool setSlotFilename(String* const);
-    bool setSlotRecordLength(Number* const);
- 
+   // slot table helper methods
+   bool setSlotPathname(String* const);
+   bool setSlotFilename(String* const);
+   bool setSlotRecordLength(Number* const);
 };
 
 inline bool FileReader::setRecordNumber(const int num)

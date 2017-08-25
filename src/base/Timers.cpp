@@ -9,14 +9,10 @@ namespace base {
 
 IMPLEMENT_SUBCLASS(Timer, "Timer")
 
-//------------------------------------------------------------------------------
-// Class (static) variables
-//------------------------------------------------------------------------------
 bool Timer::frz = false;            // Freeze flag
 Timer* Timer::timers[MAX_TIMERS];   // List of timers
 unsigned int Timer::nTimers = 0;    // Number of timers in the list
 long Timer::semaphore = 0;          // Semaphore for the timer list
-
 
 BEGIN_SLOTTABLE(Timer)
    "timerValue",         // 1: Timer interval (default: 0)
@@ -26,9 +22,9 @@ END_SLOTTABLE(Timer)
 
 // Map slot table to handles
 BEGIN_SLOT_MAP(Timer)
-   ON_SLOT(1, setSlotTimerValue,Time)
-   ON_SLOT(2, setSlotAlarmTime,Time)
-   ON_SLOT(3, setSlotTimerActive,Number)
+   ON_SLOT(1, setSlotTimerValue, Time)
+   ON_SLOT(2, setSlotAlarmTime, Time)
+   ON_SLOT(3, setSlotTimerActive, Number)
 END_SLOT_MAP()
 
 Timer::Timer()

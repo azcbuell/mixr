@@ -21,7 +21,6 @@ BEGIN_SLOTTABLE(MonitorMetrics)
     "whiteCIE",  // 6: ... CIE coordinate of reference white
 END_SLOTTABLE(MonitorMetrics)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(MonitorMetrics)
     ON_SLOT(1, setSlotRed, Table1)
     ON_SLOT(2, setSlotGreen, Table1)

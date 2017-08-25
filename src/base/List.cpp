@@ -10,7 +10,8 @@
 namespace mixr {
 namespace base {
 
-IMPLEMENT_EMPTY_SLOTTABLE_SUBCLASS(List, "List")
+IMPLEMENT_SUBCLASS(List, "List")
+EMPTY_SLOTTABLE(List)
 
 List::List()
 {

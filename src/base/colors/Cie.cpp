@@ -19,12 +19,11 @@ BEGIN_SLOTTABLE(Cie)
     "monitor"    // 4: ... Characteristics of intended display
 END_SLOTTABLE(Cie)
 
-// Map slot table to handles
 BEGIN_SLOT_MAP(Cie)
-    ON_SLOT(1,setLuminance, Number)
-    ON_SLOT(2,setX, Number)
-    ON_SLOT(3,setY, Number)
-    ON_SLOT(4,setMonitor, MonitorMetrics)
+    ON_SLOT(1, setLuminance, Number)
+    ON_SLOT(2, setX, Number)
+    ON_SLOT(3, setY, Number)
+    ON_SLOT(4, setMonitor, MonitorMetrics)
 END_SLOT_MAP()
 
 Cie::Cie(const MonitorMetrics*, const double l, const double x, const double y)

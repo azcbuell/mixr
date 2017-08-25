@@ -18,7 +18,7 @@ namespace base {
 //==============================================================================
 // Class: Func1
 //==============================================================================
-IMPLEMENT_SUBCLASS(Func1,"Func1")
+IMPLEMENT_SUBCLASS(Func1, "Func1")
 EMPTY_SLOTTABLE(Func1)
 EMPTY_CONSTRUCTOR(Func1)
 EMPTY_COPYDATA(Func1)
@@ -26,7 +26,7 @@ EMPTY_DELETEDATA(Func1)
 
 double Func1::f(const double iv1, FStorage* const s) const
 {
-   double value = 0.0;
+   double value {};
 
    // No derived class handled this ...
 
@@ -41,7 +41,7 @@ double Func1::f(const double iv1, FStorage* const s) const
 
 bool Func1::setSlotLfiTable(const Table* const msg)
 {
-   bool ok = false;
+   bool ok {};
    if (msg == nullptr) {
       ok = BaseClass::setSlotLfiTable(nullptr);
    }
@@ -57,7 +57,7 @@ bool Func1::setSlotLfiTable(const Table* const msg)
 //==============================================================================
 // Class: Func2
 //==============================================================================
-IMPLEMENT_SUBCLASS(Func2,"Func2")
+IMPLEMENT_SUBCLASS(Func2, "Func2")
 EMPTY_SLOTTABLE(Func2)
 EMPTY_CONSTRUCTOR(Func2)
 EMPTY_COPYDATA(Func2)
@@ -65,7 +65,7 @@ EMPTY_DELETEDATA(Func2)
 
 double Func2::f(const double iv1, const double iv2, FStorage* const s) const
 {
-   double value = 0.0;
+   double value {};
 
    // No derived class handled this ...
 
@@ -80,7 +80,7 @@ double Func2::f(const double iv1, const double iv2, FStorage* const s) const
 
 bool Func2::setSlotLfiTable(const Table* const msg)
 {
-   bool ok = false;
+   bool ok {};
    if (msg == nullptr) {
       ok = BaseClass::setSlotLfiTable(nullptr);
    }
@@ -96,7 +96,7 @@ bool Func2::setSlotLfiTable(const Table* const msg)
 //==============================================================================
 // Class: Func3
 //==============================================================================
-IMPLEMENT_SUBCLASS(Func3,"Func3")
+IMPLEMENT_SUBCLASS(Func3, "Func3")
 EMPTY_SLOTTABLE(Func3)
 EMPTY_CONSTRUCTOR(Func3)
 EMPTY_COPYDATA(Func3)
@@ -104,7 +104,7 @@ EMPTY_DELETEDATA(Func3)
 
 double Func3::f(const double iv1, const double iv2, const double iv3, FStorage* const s) const
 {
-   double value = 0.0;
+   double value {};
 
    // No derived class handled this ...
 
@@ -119,7 +119,7 @@ double Func3::f(const double iv1, const double iv2, const double iv3, FStorage* 
 
 bool Func3::setSlotLfiTable(const Table* const msg)
 {
-   bool ok = false;
+   bool ok {};
    if (msg == nullptr) {
       ok = BaseClass::setSlotLfiTable(nullptr);
    }
@@ -135,7 +135,7 @@ bool Func3::setSlotLfiTable(const Table* const msg)
 //==============================================================================
 // Class: Func4
 //==============================================================================
-IMPLEMENT_SUBCLASS(Func4,"Func4")
+IMPLEMENT_SUBCLASS(Func4, "Func4")
 EMPTY_SLOTTABLE(Func4)
 EMPTY_CONSTRUCTOR(Func4)
 EMPTY_COPYDATA(Func4)
@@ -143,7 +143,7 @@ EMPTY_DELETEDATA(Func4)
 
 double Func4::f(const double iv1, const double iv2, const double iv3, const double iv4, FStorage* const s) const
 {
-   double value = 0.0;
+   double value {};
 
    // No derived class handled this ...
 
@@ -159,7 +159,7 @@ double Func4::f(const double iv1, const double iv2, const double iv3, const doub
 
 bool Func4::setSlotLfiTable(const Table* const msg)
 {
-   bool ok = false;
+   bool ok {};
    if (msg == nullptr) {
       ok = BaseClass::setSlotLfiTable(nullptr);    // Setting the table to null.
    }
@@ -175,7 +175,7 @@ bool Func4::setSlotLfiTable(const Table* const msg)
 //==============================================================================
 // Class: Func5
 //==============================================================================
-IMPLEMENT_SUBCLASS(Func5,"Func5")
+IMPLEMENT_SUBCLASS(Func5, "Func5")
 EMPTY_SLOTTABLE(Func5)
 EMPTY_CONSTRUCTOR(Func5)
 EMPTY_COPYDATA(Func5)
@@ -183,7 +183,7 @@ EMPTY_DELETEDATA(Func5)
 
 double Func5::f(const double iv1, const double iv2, const double iv3, const double iv4, const double iv5, FStorage* const s) const
 {
-   double value = 0.0;
+   double value {};
 
    // No derived class handled this ...
 
@@ -199,7 +199,7 @@ double Func5::f(const double iv1, const double iv2, const double iv3, const doub
 
 bool Func5::setSlotLfiTable(const Table* const msg)
 {
-   bool ok = false;
+   bool ok {};
    if (msg == nullptr) {
       ok = BaseClass::setSlotLfiTable(nullptr);
    }
@@ -250,9 +250,9 @@ void Polynomial::deleteData()
 //------------------------------------------------------------------------------
 double Polynomial::f(const double x, FStorage* const) const
 {
-   double result = 0;
+   double result {};
    if (m > 0) {
-      unsigned int n = (m-1);
+      unsigned int n {m-1};
       double xx = 1.0;
       for (unsigned int i = 0; i <= n; i++) {
          result += (a[i] * xx);
@@ -267,7 +267,7 @@ double Polynomial::f(const double x, FStorage* const) const
 //------------------------------------------------------------------------------
 bool Polynomial::setCoefficients(const double* const aa, const unsigned short mm)
 {
-   bool ok = false;
+   bool ok {};
 
    // Clear the coefficients
    if (aa == nullptr || mm == 0) {
@@ -299,7 +299,7 @@ bool Polynomial::setCoefficients(const double* const aa, const unsigned short mm
 //------------------------------------------------------------------------------
 bool Polynomial::setSlotCoefficients(const List* const msg)
 {
-   bool ok = false;
+   bool ok {};
 
    if (msg != nullptr) {
 

@@ -6,7 +6,7 @@
 namespace mixr {
 namespace base {
 
-IMPLEMENT_SUBCLASS(Cmy,"cmy")
+IMPLEMENT_SUBCLASS(Cmy, "cmy")
 EMPTY_DELETEDATA(Cmy)
 
 BEGIN_SLOTTABLE(Cmy)
@@ -15,11 +15,10 @@ BEGIN_SLOTTABLE(Cmy)
     "yellow"    // 3: ... Yellow component, range(0.0 to 1.0)
 END_SLOTTABLE(Cmy)
 
-// Map slot table to handles 
 BEGIN_SLOT_MAP(Cmy)
-    ON_SLOT(1,setCyan,Number)
-    ON_SLOT(2,setMagenta,Number)
-    ON_SLOT(3,setYellow,Number)
+    ON_SLOT(1, setCyan, Number)
+    ON_SLOT(2, setMagenta, Number)
+    ON_SLOT(3, setYellow, Number)
 END_SLOT_MAP()
 
 Cmy::Cmy(const double c, const double m, const double y)

@@ -20,9 +20,9 @@ BEGIN_SLOTTABLE(Hls)
 END_SLOTTABLE(Hls)
 
 BEGIN_SLOT_MAP(Hls)
-    ON_SLOT(1,setHue,Number)
-    ON_SLOT(2,setLightness,Number)
-    ON_SLOT(3,setSaturation,Number)
+    ON_SLOT(1, setHue, Number)
+    ON_SLOT(2, setLightness, Number)
+    ON_SLOT(3, setSaturation, Number)
 END_SLOT_MAP()
 
 Hls::Hls(const double h, const double l, const double s)

@@ -75,7 +75,7 @@ public:
 
    // Sets the extrapolation enabled flag.
    bool setExtrapolationEnabled(const bool flg);
-   virtual bool setExtrapolationEnabled(const Number* const msg);
+   virtual bool setExtrapolationEnabled(const Number* const);
 
    // Data storage factory (pre-ref()'d)
    virtual FStorage* storageFactory() const;
