@@ -60,12 +60,12 @@ public:
     Energy();
     Energy(const double value);
 
-    void set(const double v)  { val = v; }
-    void set(const Energy& n) { val = fromEnergy(n.toEnergy()); }
+    void set(const double v)                       { val = v; }
+    void set(const Energy& n)                      { val = fromEnergy(n.toEnergy()); }
 
     virtual double toEnergy() const = 0;
     virtual double fromEnergy(const double a) const = 0;
-    double convert(const Energy& n){ return fromEnergy(n.toEnergy()); }
+    double convert(const Energy& n)                { return fromEnergy(n.toEnergy()); }
 };
 
 inline std::ostream& operator<<(std::ostream& sout, const Energy& n)

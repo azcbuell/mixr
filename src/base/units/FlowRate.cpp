@@ -80,7 +80,7 @@ void FlowRate::deleteData()
 double FlowRate::convert(Volume* newVolume, Time* newTime)
 {
     // holds our converted flowRate
-    double tempFR = 1.0;
+    double tempFR {1.0};
     // make sure we have a distance and a time to convert to
     if (newVolume != nullptr && newTime != nullptr) {
         double newVolVal = 1;
@@ -108,7 +108,7 @@ double FlowRate::convert(Volume* newVolume, Time* newTime)
 //------------------------------------------------------------------------------
 bool FlowRate::set(const double newFlowRate, Volume* newVolume, Time* newTime)
 {
-    bool ok = false;
+    bool ok {};
     // make sure we have a distance and a time to convert to
     if (newVolume != nullptr && newTime != nullptr) {
         double newVolVal = 1;
@@ -137,7 +137,7 @@ bool FlowRate::set(const double newFlowRate, Volume* newVolume, Time* newTime)
 
 bool FlowRate::setSlotVolume(Volume* newVol)
 {
-    bool ok = false;
+    bool ok {};
     if (newVol != nullptr) {
         newVol->set(1);
         myVolume = newVol;
@@ -149,7 +149,7 @@ bool FlowRate::setSlotVolume(Volume* newVol)
 
 bool FlowRate::setSlotTime(Time* newTime)
 {
-    bool ok = false;
+    bool ok {};
     if (newTime != nullptr) {
         newTime->set(1);
         myTime = newTime;
